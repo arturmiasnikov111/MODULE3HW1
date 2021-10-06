@@ -44,7 +44,6 @@ namespace MODULE3HW1
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            // call the generic version of the method
             return GetEnumerator();
         }
 
