@@ -110,7 +110,7 @@ namespace MODULE3HW1
 
         public void CopyTo(T[] array, int index)
         {
-            throw new NotImplementedException();
+            Array.Copy(_data, 0, array, index, Size);
         }
 
         private void ResizeArrayAndAdd(ref T[] items, T item)

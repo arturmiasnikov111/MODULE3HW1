@@ -9,15 +9,20 @@ namespace MODULE3HW1
         public void Run()
         {
             SuperList<int> sp = new SuperList<int>();
+            List<int> lst = new List<int>();
+            lst.Add(20);
+            lst.Add(30);
             sp.Add(1222);
             sp.Add(2);
-            List<int> lt = new List<int>();
-            lt.Add(5);
-            lt.Add(2);
-            lt.Add(3);
-            sp.AddRange(lt);
+            sp.Add(222);
+            sp.RemoveAt(0);
+            sp.Remove(2);
+            sp.Add(2000);
+            sp.AddRange(lst);
+            sp.Add(11);
+            int[] arr = new int[sp.Size];
+            sp.CopyTo(arr, 0);
             sp.Sort(new CustomComparator<int>());
-            sp.Clear();
             foreach (var item in sp)
             {
                 Console.WriteLine(item);
